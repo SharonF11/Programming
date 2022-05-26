@@ -1,2 +1,2 @@
 # Programming
-Programming CA1 - Team Sugeeth Arvioli Chinedu and Sharon 
+Programming CA1 - Team Sugeeth Arivoli Chinedu and Sharon 

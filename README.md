@@ -5,3 +5,4 @@ Ideas for a project - we could do a chatbot and code it in python, - I was think
 Another idea could be an addition to the online booking system but not sure what we could do.
 
 Whatever we decide we will need to be able to do the following CRUD - Create Review Update or Delete information stored in the program.
+A chatbot helps save a lot of time when interacting with customers.

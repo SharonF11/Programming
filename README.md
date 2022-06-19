@@ -6,3 +6,4 @@ Another idea could be an addition to the online booking system but not sure what
 
 Whatever we decide we will need to be able to do the following CRUD - Create Review Update or Delete information stored in the program.
 A chatbot helps save a lot of time when interacting with customers.
+Using the ChatterBot Python library, we can create a simple chatbot. This library is designed to deliver automated responses to user inputs. When a user enters a specific input in the chatbot, the bot saves the input along with the response for future use. Every time a new input is supplied to the chatbot, this information enables it to provide automated responses. The first step in creating a chatbot in Python is to import all the necessary packages and initialize the variables we'll be working with.

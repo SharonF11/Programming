@@ -8,3 +8,4 @@ Whatever we decide we will need to be able to do the following CRUD - Create Rev
 
 A chatbot helps save a lot of time when interacting with customers.
 Using the ChatterBot Python library, we can create a simple chatbot. This library is designed to deliver automated responses to user inputs. When a user enters a specific input in the chatbot, the bot saves the input along with the response for future use. Every time a new input is supplied to the chatbot, this information enables it to provide automated responses. The first step in creating a chatbot in Python is to import all the necessary packages and initialize the variables we'll be working with.
+To build a Python chatbot, we may also use NLTK (Natural Language Toolkit), another resourceful Python library package.

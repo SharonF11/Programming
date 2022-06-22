@@ -13,3 +13,5 @@ To build a Python chatbot, we may also use NLTK (Natural Language Toolkit), anot
 
 We organised a zoom meeting on Sunday the 19th June to discuss what ideas we all had. Arivoili and Sugeeth both had great ideas and will post them here.
 We decided to work in ideas and meet on Tuesday it was agreed that sharon would set up visula studio code and link it to this repository Both HTML and PYTHON and the name is "The ChatBot"
+
+As we discussed about creating a chatbot here are some frameworks that I think we can use to creat the bot Pandorabots, Botpress Botkit, RASA Stack, ChatterBot.

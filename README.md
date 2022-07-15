@@ -15,3 +15,14 @@ We organised a zoom meeting on Sunday the 19th June to discuss what ideas we all
 We decided to work in ideas and meet on Tuesday it was agreed that sharon would set up visula studio code and link it to this repository Both HTML and PYTHON and the name is "The ChatBot"
 
 As we discussed about creating a chatbot here are some frameworks that I think we can use to creat the bot Pandorabots, Botpress Botkit, RASA Stack, ChatterBot.
+
+The Chatbot will ask the following 
+Greet the user 
+Ask their name 
+and email addrees 
+ask how can we help you today
+The user answer which must relate to the website 
+From the answer the chatbot can direct the user to a web page 
+can we help further
+User Yes - chatbot ask how - user answers 
+Chat bot directs user

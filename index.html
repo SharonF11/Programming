@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Created and set up by Sharon Farrell (SF)-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="sport products to revserve">
+    <title>Sport Ca1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+	<!--(SF) Aos gives the effect of fading in, up and to the left.-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!--(SF)Font Awesome is used for the socila media icons -->
+    <script src="https://kit.fontawesome.com/56d4a5bb86.js" crossorigin="anonymous"></script>
+  
+</head> 
+<body>
+    <!--(SF)navbar and header which will be on all pages "Tools used CodewithMosh" -->
+	<header>
+		<div class="header">
+			<!--(SF)this function allow the navbar to collaspe on differnet devices and give an on hover change of color from the css code-->
+			<nav class="navbar collapsible" id="navbar">
+				<a aria-label="FitHouse" class="nav-logo" href="index.html">
+					<img src="images/logoFH.svg" alt="Fit House Brand"></a>
+				<svg class="icon icon--white nav__toggle">
+				<use href="images/sprite.svg#menu"></use>
+				</svg>
+				<!--(SF)This functions allows the menu on the navbar collaspe when viewed on a smaller device than a desktop-->
+				<ul class="list nav__list collapsible__content" id="menu">
+					<li class="nav__item"><a href="products.html">Products</a></li>
+					<li class="nav__item"><a href="index.html">About</a></li>
+					<li class="nav__item"><a href="index.html">Contact</a></li>
+					<li class="nav__item"><a href="index.html">Home</a></li>
+				</ul>
+			</nav>
+		</div>
+    </header>
+	
+	<!--(SF) Main body of the site with the products and links to the reserve and products page-->
+    <Main> 
+		<!--Tools used "CodewithMosh"-->
+		<section class="block block--dark block--skewed-left hero">
+			<div class="container grid">
+				<header class="block__header hero__content">
+						<!--(SF) The below is a link to AOS css which can give different effects on the web page when scrolling, I have used this tool in the past from viewing "CodewithMosh", The H1 header gives a larger font on the main header-->
+					<h1 data-aos="zoom-in" data-aos-duration="3000" class="block-heading">
+						Fitness Equipment for those serious about getting FIT</h1>
+					<h2 data-aos="zoom-in" data-aos-duration="3000">Tailored made fitness from the experts</h2>
+				</header>  
+			</div>	
+		</section>
+		<!--(SF)Tools used "W3Schools.com". This button is for the dropdown search button to view a product the onClick funtion allow this input by SF-->
+			<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">VIEW OUR PRODUCT PAGE</button>
+				<div id="myDropdown" class="dropdown-content">
+					<a href="products.html">CARDIO </a>
+					<a href="products.html">YOGA </a>
+					<a href="products.html">TECH SPORTS</a>
+					<a href="products.html">WEIGHTS</a>
+					<a href="products.html">FITNESS</a>
+					
+				</div>
+			</div>
+			<!--(SF)This is the main section of the page where you can view the products which are placed in a card within a container of 3 columns/grids created by SF-->
+		<section data-aos="fade-up" data-aos-duration="3000" class="block container block-plans">
+			<div class="grid grid--colsx3">
+       		 	<div class="plan">
+					<div class="card card--secondary">
+						<header class="card__header">
+							<img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+						</header>
+						<div class="card__body">
+						  <ul class="list">
+							  <li class="list__item"><b>FIT HOUSE ACCESSORIES</b></li>
+							<li class="list__item">Customer Reviews</li>
+							<li class="list__item">Customer Ratings</li>
+							<li class="list__item">Price from €50</li>
+						  </ul>
+							<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+						</div>
+          			</div>
+       			</div>
+				<div class="plan">
+				  	<div class="card card--secondary">
+						<header class="card__header">
+							<img src="images/threadmill.jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
+						</header>
+					<div class="card__body">
+					  <ul class="list">
+						<li class="list__item"><b>FIT HOUSE TECH EQUIPMENT</b></li>
+						<li class="list__item">Customer Reviews</li>
+						<li class="list__item">Customer Ratings</li>
+						<li class="list__item">Price from €2000</li>
+					  </ul>
+					  <button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+					</div>
+				  </div>
+				</div>
+			<div class="plan">
+			  	<div class="card card--secondary">
+					<header class="card__header">
+						<img src="images/threadmillSlider.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+					</header>
+				<div class="card__body">
+					  <ul class="list">
+						<li class="list__item"><b>FIT HOUSE EXERCISE BIKES</b></li>
+						<li class="list__item">Customer Reviews</li>
+						<li class="list__item">Customer Ratings</li>
+						<li class="list__item">Prices from €2500</li>
+					  </ul>
+				  	 <button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+				</div>
+			  </div>
+			</div>
+      	</div>
+    </section>
+	<section data-aos="fade-up" data-aos-duration="3000" class="block container block-plans">
+		<div class="grid grid--colsx3">
+			<div class="plan">
+				<div class="card card--secondary">
+					<header class="card__header">
+						<img src="images/weights.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+					</header>
+					<div class="card__body">
+						<ul class="list">
+							<li class="list__item"><b>FIT HOUSE ACCESSORIES</b></li>
+						<li class="list__item">Customer Reviews</li>
+						<li class="list__item">Customer Ratings</li>
+						<li class="list__item">Price from €50</li>
+						</ul>
+						<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+					</div>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="card card--secondary">
+					<header class="card__header">
+						<img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
+					</header>
+				<div class="card__body">
+					<ul class="list">
+					<li class="list__item"><b>FIT HOUSE TECH EQUIPMENT</b></li>
+					<li class="list__item">Customer Reviews</li>
+					<li class="list__item">Customer Ratings</li>
+					<li class="list__item">Price from €2000</li>
+					</ul>
+					<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+				</div>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="card card--secondary">
+					<header class="card__header">
+						<img src="images/yogaBands.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+					</header>
+					<div class="card__body">
+							<ul class="list">
+							<li class="list__item"><b>FIT HOUSE EXERCISE BIKES</b></li>
+							<li class="list__item">Customer Reviews</li>
+							<li class="list__item">Customer Ratings</li>
+							<li class="list__item">Prices from €2500</li>
+							</ul>
+							<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+					</div>
+				</div>
+			</div>
+      	</div>
+    </section>
+	<section data-aos="fade-up-right" data-aos-duration="3000" class="block container block-plans">
+		<div class="grid grid--colsx3">
+			<div class="plan">
+					<div class="card card--secondary">
+						<header class="card__header">
+							<img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+						</header>
+						<div class="card__body">
+						  <ul class="list">
+							  <li class="list__item"><b>FIT HOUSE ACCESSORIES</b></li>
+							<li class="list__item">Customer Reviews</li>
+							<li class="list__item">Customer Ratings</li>
+							<li class="list__item">Price from €50</li>
+						  </ul>
+							<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+						</div>
+          			</div>
+       			</div>
+				<div class="plan">
+				  	<div class="card card--secondary">
+						<header class="card__header">
+							<img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
+						</header>
+					<div class="card__body">
+					  <ul class="list">
+						<li class="list__item"><b>FIT HOUSE TECH EQUIPMENT</b></li>
+						<li class="list__item">Customer Reviews</li>
+						<li class="list__item">Customer Ratings</li>
+						<li class="list__item">Price from €2000</li>
+					  </ul>
+					  <button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+					</div>
+				  </div>
+				</div>
+			<div class="plan">
+			  	<div class="card card--secondary">
+					<header class="card__header">
+						<img src="images/techsports.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+					</header>
+				<div class="card__body">
+					  <ul class="list">
+						<li class="list__item"><b>FIT HOUSE EXERCISE BIKES</b></li>
+						<li class="list__item">Customer Reviews</li>
+						<li class="list__item">Customer Ratings</li>
+						<li class="list__item">Prices from €2500</li>
+					  </ul>
+				  	 <button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+				</div>
+			  </div>
+			</div>
+        </div>
+    </section>		
+    </Main>
+    <!--(SF)Footer of the site which will be on all pages-->
+	<footer class="footer">
+		<div class="container1">
+			<div class="footer-main container1">
+				<div class="col">
+					<h3 class="footer-heading">USEFUL LINKS</h3>
+					<a href="index.html" class="footer-link">Fit House</a>
+					<a href="index.html" class="footer-link">About Us</a>
+					<a href="index.html" class="footer-link">Contact Us</a>
+					<a href="products.html" class="footer-link">Our Products</a>
+				</div>
+				<div class="col">
+					<h3 class="footer-heading">NEWSLETTER</h3>
+					<form>
+						<!--(SF)this is the form and the input must be in the form of an eamil address if not it will throw back an message asking for email address-->
+						<input type="email" placeholder="Your Email Address" required>
+						<br>
+						<button type="submit">SUBSCRIBE NOW</button>
+					</form>
+				</div>
+				<div class="col">
+					<h3 class="footer-heading">CONTACT US</h3>
+					<P class="address">123 Off Street<br/>City Center<br/>Dublin<br/>email:info@123fithouse.com<br/>Tel:+35311231234</P> 
+				</div>
+				<div class="col">
+					<h3>SOCIAL</h3>
+					<div class="social-icons">
+						<a href="#" class="social"><i class="fab fa-facebook"></i>
+						<a href="#" class="social"><i class="fab fa-twitter"></i>
+						<a href="#" class="social"><i class="fab fa-youtube"></i>
+						<a href="#" class="social"><i class="fab fa-instagram"></i>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span class="copyright">&copy; 2022 Fit House</span>
+			</div>
+		</div>	
+	</footer>
+		<!--This import the js file and links it to the index.html file-->
+    <script src="js/main.js"></script> 
+		<!--(SF)The below link it to allow the function of the zoom capability on the page -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>AOS.init();</script>
+	<!--(SF)This is the JS function to allow the navbar and menu Icon stay on the top of the page if we scroll down the website-->
+	<script>var navbar = document.getElementById("navbar");
+			var menu = document.getElementById("menu");
+
+			window.onscroll = function(){
+				if(window.pageYOffset >= menu.offsetTop){
+					navbar.classList.add("sticky");
+				}
+				else{
+				navbar.classList.remove("sticky");
+				}
+			}
+	</script>
+</body>
+</html>

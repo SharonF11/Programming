@@ -1,12 +1,12 @@
 /*Sharon Farrell set up and implented the design and styling for the website and input this sytling in the .css files*/
 /*defines our color pallette*/
 :root {
-    --color-primary: #2584ff;
-    --color-secondary: #00d9ff;
-    --color-accent: #ff3400;
+    --color-primary: #101010;
+    --color-secondary: #4c4d4f;
+    --color-accent: #9cd4e0;
     --color-headings: antiquewhite;
-    --color-body: #918ca4;
-    --color-body-darker: #5c5577;
+    --color-body: #e4e6a3;
+    --color-body-darker: #f09c23;
     --color-card: #5c5577;
     --color-border: #ccc;
     --border-radius: 30px;
@@ -97,12 +97,12 @@ a {
 /*Styling for the card which hold the product details*/
 .card {
     border-radius: 5px;
-    box-shadow: 0 0 10px 5px rgb(178, 115, 236);
+    box-shadow: 0 0 10px 5px #f09c23;
     overflow: hidden;
 }
 .card-1 {
     border-radius: 5px;
-    box-shadow: 0 0 10px 5px rgb(146, 146, 243);
+    box-shadow: 0 0 10px 5px #f09c23;
     overflow: hidden;
 }
 .card-header, .card__body{
@@ -110,17 +110,17 @@ a {
 }
 .card--primary .card-header {
     background: white;
-    color: whitesmoke;
+    color: var(--color-accent);
 }
 .card--secondary .card__header {
   background: white;
   color: black;
 }
 .card--primary .badge--primary {
-  background: #126de4;
+  background: var(--color-border);
 }
 .card--secondary .badge--secondary {
-  background: #02cdf1;
+  background: var(--color-border);
 }
 .plan {
   transition: transform 0.2s ease-out;
@@ -148,7 +148,7 @@ a {
     height: 40px;
 }
 .icon--white{
-    fill: whitesmoke;
+    fill: var(--color-card);
 }
 .icon-container {
     align-items: center;
@@ -177,37 +177,37 @@ a {
 }
 .btn--primary {
     background: var(--color-primary);
-    color: whitesmoke;
+    color: var(--color-primary);
 }
 .btn--primary:hover {
-    background: #076ef5;
+    background: var(--color-body-darker);
 }
 .btn--secondary {
     background: var(--color-secondary);
-    color: whitesmoke;
+    color: var(--color-body);
 }
 .btn--secondary:hover {
-    background: #918ca4;
+    background: var(--color-secondary);
 }
 .btn--accent {
     background: var(--color-accent);
-    color:whitesmoke;
+    color:var(--color-accent);
 }
 .btn--accent:hover {
-    background: #1b0760;
+    background: var(--color-accent);
 }
 .btn--block{
     width: 100%;
     display: inline-block;
 }
 .btn--outline {
-    background: whitesmoke;
-    color: blue;
-    border: 2px solid hsla(240,98%,49%,1.00);
+    background: var(--color-body-darker);
+    color: var(--color-primary);
+    border: 2px solid rgb(100, 100, 101);
 }
 .btn--outline:hover {
-    background: blue;
-    color:whitesmoke;
+    background: var(--color-accent);
+    color:var(--color-accent);
 }
 .btn--long {
     padding-left: 6rem;
@@ -271,9 +271,9 @@ a {
 	margin-bottom: 6rem;
 }
 .block--dark {
-    background: rgb(70,6,244);
-    background: linear-gradient(90deg, rgba(70,6,244,1) 0%, rgba(111,2,241,1) 53%, rgba(124,34,195,1) 100%);
-    color: antiquewhite;
+    background: rgb(16,16,16);
+    background: linear-gradient(90deg, rgba(16,16,16,1) 0%, rgba(76,77,79,1) 42%, rgba(156,212,224,1) 100%);
+    color:  antiquewhite;
 }
 .block--dark .block-heading {
     color: antiquewhite;
@@ -296,14 +296,14 @@ a {
 .header{
     width:100%;
     height: 25vh;
-    background-image: url(/SportEquipmentCA1/images/techsports.jpg);
+    background-image: url(/images/techsports.jpg);
     background-position: center;
     background-size: cover;
 }
 /*(SF) styling for the navbar */
 .navbar{
-    background: rgb(74,68,92);
-    background: linear-gradient(90deg, rgba(74,68,92,1) 0%, rgba(37,4,77,1) 53%, rgba(34,55,195,1) 100%);
+    background: rgb(76,77,79);
+    background: linear-gradient(90deg, rgba(76,77,79,1) 0%, rgba(156,212,224,1) 42%, rgba(16,16,16,1) 100%);
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -341,7 +341,7 @@ a {
     border-bottom: 1px solid #222;
 }
 .nav__item>a {
-    color: whitesmoke;
+    color: var(--color-secondary);
     transition: color 0.3s ease;
 }
 .nav__item>a:hover {
@@ -383,7 +383,7 @@ a {
 }
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-background-color: #3c53eb;
+background-color: var(--color-card);
 }
     
     /* The container <div> - needed to position the dropdown content */
@@ -399,7 +399,7 @@ transform: translateY(5px);
 .dropdown-content {
 display: none;
 position: absolute;
-background-color: #a45be0;
+background-color: var(--color-card);
 min-width: 160px;
 box-shadow: 0px 8px 16px 0px antiquewhite;
 border-radius: 25px;
@@ -415,7 +415,7 @@ display: block;
 }
     
     /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color:#3c53eb}
+.dropdown-content a:hover {background-color:var(--color-accent)}
     
     /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
@@ -429,13 +429,13 @@ display: block;
 }
 /*Footer design and colours scheme */
 .footer{
-    background: rgb(34,55,195);
-    background: linear-gradient(90deg, rgba(34,55,195,1) 0%, rgba(37,4,77,1) 53%, rgba(74,68,92,1) 100%);
-    color: whitesmoke;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(156,212,224,1) 42%, rgba(76,77,79,1) 100%);
+    color: var(--color-body);
     padding: 4rem 1rem;     
 }
 .footer a {
-    color: whitesmoke;
+    color: var(--color-body);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -496,7 +496,7 @@ display: block;
     line-height:40px;  
 }
 .social-icons>a:hover {
-    color: rgb(102, 100, 100);
+    color: var(--color-body-darker);
     transition: color 0.3s ease;
     padding-left: 6px;
 } 
@@ -531,8 +531,8 @@ input{
 }
 form button{
     background: transparent;
-    border: 2px solid whitesmoke;
-    color: whitesmoke;
+    border: 2px solid;
+    color: var(--color-body-darker);
     border-radius: 30px;
     padding: 10px 30px;
     font-size: 15px;
@@ -556,7 +556,7 @@ form button{
 }
   /*Tools Used for dropdown is W3Schools*/
 .dropbtn {
-    background-color: #9851f0;
+    background-color: var(--color-body-darker);
     color: antiquewhite;
     padding: 16px;
     font-size: 40px;

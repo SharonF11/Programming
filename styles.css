@@ -1,0 +1,568 @@
+/*Sharon Farrell set up and implented the design and styling for the website and input this sytling in the .css files*/
+/*defines our color pallette*/
+:root {
+    --color-primary: #2584ff;
+    --color-secondary: #00d9ff;
+    --color-accent: #ff3400;
+    --color-headings: antiquewhite;
+    --color-body: #918ca4;
+    --color-body-darker: #5c5577;
+    --color-card: #5c5577;
+    --color-border: #ccc;
+    --border-radius: 30px;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Mukta, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    font-display: var(--color-headings);  
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body{
+    font-family: Mukta, Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    line-height: 1.25;
+    /* color: var(--color-body); */
+}
+h1,h2,h3{
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+h4 {
+    color: var(--color-card);
+}
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;   
+}
+p {
+    margin-top: 0;
+}
+@media screen and (min-width : 1185px ){
+    body{
+        font-size: 1.8rem;
+    }
+    h1 {
+        font-size: 8rem;
+    }
+    h2{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 2.4rem
+    }
+}
+/*Styling for the list Item for the products */
+a {
+    text-decoration: none;
+}
+.list {
+    list-style: none;
+    padding-left: 0;
+    color: var(--color-card);
+}
+.list--inline .list-item {
+    display: inline-block;
+    margin-right: 2rem;
+}
+.list--tick {
+    list-style-image: url(../images/tick.svg);
+    padding-left: 3rem;
+}
+.list--tick .list-item{
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+}
+@media screen and (min-width : 1185px ){
+    .list--tick .list-item {
+        padding-left: 0;
+    }
+}
+/*Styling for the card which hold the product details*/
+.card {
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgb(178, 115, 236);
+    overflow: hidden;
+}
+.card-1 {
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgb(146, 146, 243);
+    overflow: hidden;
+}
+.card-header, .card__body{
+    padding: 2rem 4rem;
+}
+.card--primary .card-header {
+    background: white;
+    color: whitesmoke;
+}
+.card--secondary .card__header {
+  background: white;
+  color: black;
+}
+.card--primary .badge--primary {
+  background: #126de4;
+}
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+.plan {
+  transition: transform 0.2s ease-out;
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+.badge--small{
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+	border:0;
+    margin-right: 2rem;
+    display: block;
+	white-space: nowrap;
+}
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.icon--white{
+    fill: whitesmoke;
+}
+.icon-container {
+    align-items: center;
+    background: white;
+    border-radius: 100%;
+    display: inline-flex;
+    height: 64px;
+    justify-content: center;
+    width: 64px;
+}
+.icon-container-accent{
+    background: var(--color-accent);
+}
+/*Styling for the button on see and reserve*/
+.btn {
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.btn--primary {
+    background: var(--color-primary);
+    color: whitesmoke;
+}
+.btn--primary:hover {
+    background: #076ef5;
+}
+.btn--secondary {
+    background: var(--color-secondary);
+    color: whitesmoke;
+}
+.btn--secondary:hover {
+    background: #918ca4;
+}
+.btn--accent {
+    background: var(--color-accent);
+    color:whitesmoke;
+}
+.btn--accent:hover {
+    background: #1b0760;
+}
+.btn--block{
+    width: 100%;
+    display: inline-block;
+}
+.btn--outline {
+    background: whitesmoke;
+    color: blue;
+    border: 2px solid hsla(240,98%,49%,1.00);
+}
+.btn--outline:hover {
+    background: blue;
+    color:whitesmoke;
+}
+.btn--long {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+@media screen and (min-width : 1185px ){
+    .btn{
+        font-size: 1.75rem;
+    }    
+}
+@media screen and (min-width: 1024px){
+    .product__name{
+        font-size: 1.4rem;
+    }   
+}
+/*Styling for the grids that hold the cards and align*/
+.grid {
+    display:grid;
+}
+@media screen and (min-width : 1024px ){
+   .grid--colsx3 {
+       grid-template-columns: 1fr 1fr 1fr;
+    }
+@media screen and (min-width: 768px){
+    .grid--colsx2 {
+       grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+/*creates the styling for the Header*/
+.collapsible__header{
+    display: flex;
+    justify-content: space-between;
+}
+.collapsible__heading{
+    margin-top: 0;
+    font-size: 3rem;
+}
+.collapsible__content{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: all .6s;
+}
+.collapsible--expanded {
+    transform:rotate(0);
+}
+.collapsible--expanded .collapsible__content{
+    max-height: 100vh;
+    opacity: 1;
+}
+.block{
+   	padding:5rem 2rem;
+	text-align: center;
+}
+.block-heading {
+    margin-top: 0;
+}
+.block__header{
+	text-align: center;
+	margin-bottom: 6rem;
+}
+.block--dark {
+    background: rgb(70,6,244);
+    background: linear-gradient(90deg, rgba(70,6,244,1) 0%, rgba(111,2,241,1) 53%, rgba(124,34,195,1) 100%);
+    color: antiquewhite;
+}
+.block--dark .block-heading {
+    color: antiquewhite;
+}
+/*This styles the cut off shaped at the bottom of the block of gradient colour in the header*/
+.block--skewed-right {
+    padding-bottom: calc(var(--padding-vertical) +2rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);  
+}
+
+.block--skewed-left {
+    padding-bottom: calc(var(--padding-vertical) +4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);  
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+} 
+/*The places the image under the Navbar and on top of the header*/
+.header{
+    width:100%;
+    height: 25vh;
+    background-image: url(/SportEquipmentCA1/images/techsports.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/*(SF) styling for the navbar */
+.navbar{
+    background: rgb(74,68,92);
+    background: linear-gradient(90deg, rgba(74,68,92,1) 0%, rgba(37,4,77,1) 53%, rgba(34,55,195,1) 100%);
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    align-items: center; 
+	box-shadow: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+}
+/*Sticky allows the navbar to stay visible on scrolling and index brings the navbar to the front of other elements*/
+.navbar.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 5s;
+    z-index:1;
+}
+.navbar.sticky ul{
+    width: auto;
+
+}
+/*This is the list on the navbar*/
+.nav__list{
+    width:100%;
+    display: inline-block;
+    margin: 0;
+}
+.nav__item{
+    padding:0.5rem 2 rem;
+    border-bottom: 1px solid #222;
+}
+.nav__item>a {
+    color: whitesmoke;
+    transition: color 0.3s ease;
+}
+.nav__item>a:hover {
+    color: rgb(102, 100, 100);
+}
+.nav__toggle{
+    opacity: .5;
+    transition: box-shadow .20s;
+    cursor: pointer;
+}
+/*Allows the navbar menu to collaspe on smaller devices and show the menu Icon this can be clicked to show the pages */
+.navbar.collapsible--expanded .nav__toggle{
+    opacity: 1;
+    box-shadow: 0 0 0 3px antiquewhite;
+    border-radius: 4px;
+}
+.nav-logo {
+  transform: translateY(5px);
+  width: 150px;
+  cursor:pointer;
+}
+/*The media queries make the elements visible on different devices */
+@media screen and (min-width:768px) {
+    .nav__toggle{
+        display:none;
+    }
+    .nav__list{
+        width: auto;
+        display:flex;
+        font-size: 1.7rem;
+        max-height: 100%;
+        opacity: 1;
+        padding:0 3rem;   
+    }
+    .nav__item {
+        border: 0;
+        margin-right: 10px;   
+    }
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+background-color: #3c53eb;
+}
+    
+    /* The container <div> - needed to position the dropdown content */
+.dropdown {
+position: relative;
+display: inline-block;
+font-size: 40PX;
+border-radius: 25px;
+transform: translateY(5px);
+}
+    
+    /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #a45be0;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px antiquewhite;
+border-radius: 25px;
+z-index: 1;
+}
+    
+    /* Links inside the dropdown */
+.dropdown-content a {
+color: antiquewhite;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+    
+    /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:#3c53eb}
+    
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+/*(SF) Creates the sapce between the cards*/
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+.block-plans .card .card-1{
+  max-width: 500px;
+  margin: 0 auto;
+}
+/*Footer design and colours scheme */
+.footer{
+    background: rgb(34,55,195);
+    background: linear-gradient(90deg, rgba(34,55,195,1) 0%, rgba(37,4,77,1) 53%, rgba(74,68,92,1) 100%);
+    color: whitesmoke;
+    padding: 4rem 1rem;     
+}
+.footer a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+/*On hover changes coour to grey*/
+.footer a:hover{
+    color:grey;   
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto; 
+   
+}
+.footer-main{
+    display: flex;
+    margin-bottom: 4rem;
+}
+.col{
+    flex-basis: 200px;
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 auto;  
+}
+.footer-heading{
+    display: block;
+    width: max-content;
+    padding: 5px 10px;
+    margin: 0 auto;
+}
+.address{
+    font-size: 30px;
+}
+.footer-link{
+    display: block;
+    width: max-content;
+    padding: 5px 10px;
+    margin: 0 auto;
+    font-size: 30px;
+}
+/*This gives a hover effect as you point to the website*/
+.footer-link :hover{
+    color: rgb(102, 100, 100);
+    transition: color 0.3s ease;
+    padding-left: 6px;
+}
+.copyright{
+    display: block;
+    text-align: center;
+    margin-right: auto;
+}
+.social-icons{
+    font-size: 30px;
+    margin:0 15px 15px 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height:40px;  
+}
+.social-icons>a:hover {
+    color: rgb(102, 100, 100);
+    transition: color 0.3s ease;
+    padding-left: 6px;
+} 
+/*SF Footer responsiveness on smaller devices such as Iphone, Galaxy and Ipad*/
+@media only screen and (max-width:768px){
+    .container1{
+       width:100%;
+       float: none;
+       display: block;
+    } 
+}
+@media only screen and (max-width:810px){
+    .container1{
+       width:100%;
+       float: none;
+       display: block;
+    } 
+}
+.social{
+    font-size: 30px;
+} 
+/* SF Newletter subscription buttons and columns*/
+input{
+    width: 300px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+form button{
+    background: transparent;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+/*Social media icons on footer*/
+.social-icons{
+    font-size: 20px;
+    margin:0 15px 15px 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height:40px;  
+}
+.social-icons i:hover {
+    color: rgb(102, 100, 100);
+    transition: color 0.3s ease;
+    padding-left: 6px;
+}
+  /*Tools Used for dropdown is W3Schools*/
+.dropbtn {
+    background-color: #9851f0;
+    color: antiquewhite;
+    padding: 16px;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transform: translateY(5px);
+}
+ 

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--(SF)The desing and layout was created and setup by Sharon Farrell (SF)-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="sport products to revserve">
+    <title>Sport Ca1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--(SF)Links to the visual studio code extenstion normalize - this optimizes the css within visual studio-->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!--(SF)Links my css code to the pages-->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!--(SF)AOS is a download to allow differnet functions on the page such as the header fading in and the spped of which is fads-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- (SF)fontawesomw is an open source Icon provider for our social media icons-->
+    <script src="https://kit.fontawesome.com/56d4a5bb86.js" crossorigin="anonymous"></script>
+  <!--(SF) Tools used for the design of this website, CodingWithMosh, W3Schools, cssgradient generator, Fontawesome-->
+</head>
+<body>
+  <!--(SF) this is the start of our web page-->
+    <header>
+        <div class="header"> 
+            <nav class="navbar collapsible" id="navbar">
+              <!--(SF)when clicked on our cursor changes to a pointer and allow the logo to be click and linked to the home page when clicked on any of the pages-->
+                <a aria-label="FitHouse" class="nav-logo" href="index.html">
+                    <img src="images/logoFH.svg" alt="Fit House Brand">
+                </a>
+                <!--(SF)when the navbar is shown on a smaller divce the page menu changes to a hamburger style icon when this is clicked it bring a drop down to the different pages you want to visit-->
+                  <svg class="icon icon--white nav__toggle">
+                    <use href="images/sprite.svg#menu"></use>
+                  </svg>
+                    <ul class="list nav__list collapsible__content" id="menu">
+                        <li class="nav__item"><a href="products.html">Products</a><li>
+                        <li class="nav__item"><a href="index.html">About</a></li>
+                        <li class="nav__item"><a href="index.html">Contact</a></li>
+                        <li class="nav__item"><a href="index.html">Home</a></li>
+                    </ul>
+            </nav>
+        </div>
+        <!--(SF)The header has been desinged from an example of the codewithmosh tutorial There is a tool called -->
+      </header>
+      <section class="block block--dark block--skewed-left hero">
+        <div class="container grid">
+          <header class="block__header hero__content">
+              <!--(SF)The below is a link to AOS css which can give different effects on the web page when scrolling found it watching "CodewithMosh"-->
+            <h1 data-aos="zoom-in" data-aos-duration="3000" class="block__heading">
+            Fitness Equipment for those serious about getting FIT</h1>
+            <h2 data-aos="zoom-in" data-aos-duration="3000">Tailored made fitness from the experts</h2>
+          </header>  
+        </div>
+      </section>
+      <!--(SF)Tools used W3Schools-->
+      <div class="dropdown">
+			  <button onclick="myFunction()" class="dropbtn">VIEW OUR PRODUCT PAGE</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="products.html">CARDIO </a>
+            <a href="products.html">YOGA </a>
+            <a href="products.html">TECH SPORTS</a>
+            <a href="products.html">WEIGHTS</a>
+            <a href="products.html">FITNESS</a>
+          </div>
+		  </div>
+      <!--(SF)To give the products page a different layout we used a 2 grid container instead of 3 grids but for the last section where we kept the 3 grids -->
+    <section data-aos="fade-up" data-aos-duration="3000" class="block container block-plans">
+			<div class="grid grid--colsx2">
+       		<div class="plan">
+            <div class="card-1 card--secondary">
+              <header class="card__header">
+                <img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <h4 class="list-item">FH WELLBEING</h4>
+                  <li class="list-item">Product Details</li>
+                  <li class="list-item">Customer review: excellent products with great instruction</li>
+                  <li class="list-item">Star rating *</li>
+                  <li class="list-item">€150</li>
+                </ul>
+                <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+              </div>
+            </div>
+       		</div>
+           <div class="plan">
+            <div class="card-1 card--secondary">
+              <header class="card__header">
+                <img src="images/yogaBands.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+              </header>
+              <div class="card__body">
+                  <ul class="list list--tick">
+                    <h4 class="list-item">FH WEIGHTS</h4>
+                    <li class="list-item">Product Details</li>
+                    <li class="list-item">Customer review: excellent products with great instruction</li>
+                    <li class="list-item">Star rating 5*</li>
+                    <li class="list-item"> FROM €25</li>
+                  </ul>
+                  <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+              </div>
+            </div>
+          </div>
+			  </div>
+      </div>
+    </section>
+    <section data-aos="fade-up" data-aos-duration="3000" class="block container block-plans">
+			<div class="grid grid--colsx2">
+        <div class="plan">
+			  	<div class="card-1 card--secondary">
+					<header class="card__header">
+						<img src="images/threadmillSlider.jpg" style="width: 350px; height:300px" alt="fit house threadmill"/>
+					</header>
+				<div class="card__body">
+					  <ul class="list list--tick">
+              <h4 class="list-item">FH EXERCISE BIKES</h4>
+              <li class="list-item">Product Details</li>
+              <li class="list-item">Customer reviews: Fit House have been so efficient</li>
+              <li class="list-item">Star rating 5*</li>
+              <li class="list-item">€2500</li>
+					  </ul>
+            <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+				</div>
+			  </div>
+			</div>
+				  <div class="plan">
+				  	<div class="card-1 card--secondary">
+              <header class="card__header">
+                <img src="images/threadmill.jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
+              </header>
+					  <div class="card__body">
+              <ul class="list list--tick">
+                <h4 class="list-item">FH FITNESS</h4>
+                <li class="list-item">Product Details</li>
+                <li class="list-item">Customer review: excellent products with great instruction</li>
+                <li class="list-item">Star rating 5*</li>
+                <li class="list-item">€150</li>
+              </ul>
+					    <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+					  </div>
+				  </div>
+			  </div>
+      </div>
+    </section>
+
+  <section data-aos="fade-up" data-aos-duration="3000" class="block container block-plans">
+      <div class="grid grid--colsx2">
+          <div class="plan">
+            <div class="card-1 card--secondary">
+              <header class="card__header">
+                <img src="images/weights.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+              </header>
+                <div class="card__body">
+                  <ul class="list list--tick">
+                    <h4 class="list-item">FH Weights</h4>
+                    <li class="list-item">Product Details</li>
+                    <li class="list-item">Customer review: excellent products with great instruction</li>
+                    <li class="list-item">Star rating 3*</li>
+                    <li class="list-item">From €25</li>
+                  </ul>
+                <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)">Reserve Now</button>
+                </div>
+            </div>
+          </div>
+        <div class="plan">
+            <div class="card-1 card--secondary">
+              <header class="card__header">
+                <img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <h4 class="list-item">FH Tech sports </h4>
+                  <li class="list-item">Product Details</li>
+                  <li class="list-item">Customer review: excellent products with great instruction</li>
+                  <li class="list-item">Star rating 4*</li>
+                  <li class="list-item">€1500</li>
+                </ul>
+                <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-up-right" data-aos-duration="3000" class="block container block-plans">
+      <div class="grid grid--colsx2">
+        <div class="plan">
+            <div class="card-1 card--secondary">
+              <header class="card__header">
+                <img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <h4 class="list-item">FH ACCESSORIES</h4>
+                  <li class="list-item">Product Details</li>
+                  <li class="list-item">Customer review: excellent products with great instruction</li>
+                  <li class="list-item">Star rating 5*</li>
+                  <li class="list-item">From €50</li>
+                </ul>
+                <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="plan">
+            <div class="card-1 card--secondary">
+              <header class="card__header">
+                <img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <h4 class="list-item">FH CARDIO</h4>
+                  <li class="list-item">Product Details</li>
+                  <li class="list-item">Customer review: excellent products with great instruction</li>
+                  <li class="list-item">Star rating 4*</li>
+                  <li class="list-item">€2500</li>
+                </ul>
+                <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-up-right" data-aos-duration="3000" class="block container block-plans">
+      <div class="grid grid--colsx2">
+        <div class="plan">
+          <div class="card-1 card--secondary">
+            <header class="card__header">
+              <img src="images/techsports.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <h4 class="list-item">FH CARDIO</h4>
+                <li class="list-item">Product Details</li>
+                <li class="list-item">Customer review: excellent products with great instruction</li>
+                <li class="list-item">Star rating 3*</li>
+                <li class="list-item">€1500</li>
+              </ul>
+              <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+            </div>
+          </div>
+        </div>
+          <div class="plan">
+            <div class="card-1 card--secondary">
+              <header class="card__header">
+                <img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
+              </header>
+              <div class="card__body">
+                <ul class="list list--tick">
+                  <h4 class="list-item">FH CARDIO</h4>
+                  <li class="list-item">Product Details</li>
+                  <li class="list-item">Customer review: excellent products with great instruction</li>
+                  <li class="list-item">Star rating 4*</li>
+                  <li class="list-item">€2500</li>
+                </ul>
+                <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!--(SF)To give the products page a different layout we used a 2 grid container instead of 3 grids but for the last section where we kept the 3 grids -->
+    <section data-aos="fade-up-right" data-aos-duration="3000" class="block container block-plans">
+      <div class="grid grid--colsx3">
+        <div class="plan">
+          <div class="card-1 card--secondary">
+            <header class="card__header">
+              <img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <h4 class="list-item">FH ACCESSORIES</h4>
+                <li class="list-item">Product Details</li>
+                <li class="list-item">Customer review: excellent products with great instruction</li>
+                <li class="list-item">Star rating 5*</li>
+                <li class="list-item">From €50</li>
+              </ul>
+              <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="plan">
+          <div class="card-1 card--secondary">
+            <header class="card__header">
+              <img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <h4 class="list-item">FH CARDIO</h4>
+                <li class="list-item">Product Details</li>
+                <li class="list-item">Customer review: excellent products with great instruction</li>
+                <li class="list-item">Star rating 4*</li>
+                <li class="list-item">€2500</li>
+              </ul>
+              <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="plan">
+          <div class="card-1 card--secondary">
+            <header class="card__header">
+              <img src="images/techsports.jpg" style="width: 350px; height:300px" alt="fit house Techsports"/>
+            </header>
+          <div class="card__body">
+            <ul class="list list--tick">
+              <h4 class="list-item">FH CARDIO</h4>
+              <li class="list-item">Product Details</li>
+              <li class="list-item">Customer review: excellent products with great instruction</li>
+              <li class="list-item">Star rating 3*</li>
+              <li class="list-item">€1500</li>
+            </ul>
+            <button class="btn btn--outline btn--block" onclick="change((this).innerHTML)";>Reserve Now</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- (SF)Footer of the site which will be on all pages-->
+	<footer class="footer">
+		<div class="container1">
+			<div class="footer-main container1">
+				<div class="col">
+					<h3 class="footer-heading">USEFUL LINKS</h3>
+					<a href="index.html" class="footer-link">Fit House</a>
+					<a href="index.html" class="footer-link">About Us</a>
+					<a href="index.html" class="footer-link">Contact Us</a>
+					<a href="products.html" class="footer-link">Our Products</a>
+				</div>
+				<div class="col">
+					<h3 class="footer-heading">NEWSLETTER</h3>
+					<form>
+						<!--(SF)this is the form and the input must be in the form of an eamil address if not it will throw back an message asking for email address-->
+						<input type="email" placeholder="Your Email Address" required>
+						<br>
+						<button type="submit">SUBSCRIBE NOW</button>
+					</form>
+				</div>
+				<div class="col">
+					<h3 class="footer-heading">CONTACT US</h3>
+					<P>123 Off Street<br/>City Center<br/>Dublin<br/>email:info@123fithouse.com<br/>Tel:+35311231234</P> 
+				</div>
+				<div class="col">
+					<h3>SOCIAL</h3>
+					<div class="social-icons">
+						<a href="#" class="social"><i class="fab fa-facebook"></i>
+						<a href="#" class="social"><i class="fab fa-twitter"></i>
+						<a href="#" class="social"><i class="fab fa-youtube"></i>
+						<a href="#" class="social"><i class="fab fa-instagram"></i>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<span class="copyright">&copy; 2022 Fit House</span>
+		</div>
+	</footer>
+
+  <script src="js/main.js"></script> 
+		<!--(SF)The below link it to allow the function of the zoom capability on the page -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>AOS.init();</script>
+	<!--(SF)This is the JS function to allow the navbar stay on the top of the page if we scroll down the website-->
+	<script>var navbar = document.getElementById("navbar");
+			var menu = document.getElementById("menu");
+
+			window.onscroll = function(){
+				if(window.pageYOffset >= menu.offsetTop){
+					navbar.classList.add("sticky");
+				}
+				else{
+				navbar.classList.remove("sticky");
+				}
+			}
+	</script>
+  <script>
+    function change(){
+      alert("You have reserved this item");
+    }
+  </script>
+</body>
+</html>

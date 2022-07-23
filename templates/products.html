@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
     <!--(SF)Links to the visual studio code extenstion normalize - this optimizes the css within visual studio-->
-    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" /><!-- using jinja2 template flask-->
     <!--(SF)Links my css code to the pages-->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /><!-- using jinja2 template flask-->
     <!--(SF)AOS is a download to allow differnet functions on the page such as the header fading in and the spped of which is fads-->
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- (SF)fontawesomw is an open source Icon provider for our social media icons-->
@@ -27,18 +27,18 @@
         <div class="header"> 
             <nav class="navbar collapsible" id="navbar">
               <!--(SF)when clicked on our cursor changes to a pointer and allow the logo to be click and linked to the home page when clicked on any of the pages-->
-                <a aria-label="FitHouse" class="nav-logo" href="index.html">
-                    <img src="images/logoFH.svg" alt="Fit House Brand">
+                <a aria-label="FitHouse" class="nav-logo" href="{{ url_for('index') }}"><!-- using jinja2 template flask-->
+                    <img src="{{url_for('static', filename='images/logoFH.svg')}}" alt="Fit House Brand"><!-- using jinja2 template flask-->
                 </a>
                 <!--(SF)when the navbar is shown on a smaller divce the page menu changes to a hamburger style icon when this is clicked it bring a drop down to the different pages you want to visit-->
                   <svg class="icon icon--white nav__toggle">
-                    <use href="images/sprite.svg#menu"></use>
+                    <use href="{{url_for('static', filename='images/sprite.svg#menu')}}"></use><!-- using jinja2 template flask-->
                   </svg>
                     <ul class="list nav__list collapsible__content" id="menu">
-                        <li class="nav__item"><a href="products.html">Products</a><li>
-                        <li class="nav__item"><a href="index.html">About</a></li>
-                        <li class="nav__item"><a href="index.html">Contact</a></li>
-                        <li class="nav__item"><a href="index.html">Home</a></li>
+                        <li class="nav__item"><a href="{{ url_for('products') }}">Products</a><li><!-- using jinja2 template flask-->
+                        <li class="nav__item"><a href="{{ url_for('index') }}">About</a></li><!-- using jinja2 template flask-->
+                        <li class="nav__item"><a href="{{ url_for('contact') }}">Contact</a></li><!-- using jinja2 template flask-->
+                        <li class="nav__item"><a href="{{ url_for('index') }}">Home</a></li><!-- using jinja2 template flask-->
                     </ul>
             </nav>
         </div>
@@ -58,11 +58,11 @@
       <div class="dropdown">
 			  <button onclick="myFunction()" class="dropbtn">VIEW OUR PRODUCT PAGE</button>
           <div id="myDropdown" class="dropdown-content">
-            <a href="products.html">CARDIO </a>
-            <a href="products.html">YOGA </a>
-            <a href="products.html">TECH SPORTS</a>
-            <a href="products.html">WEIGHTS</a>
-            <a href="products.html">FITNESS</a>
+            <a href="{{ url_for('products') }}">CARDIO </a><!-- using jinja2 template flask-->
+            <a href="{{ url_for('products') }}">YOGA </a><!-- using jinja2 template flask-->
+            <a href="{{ url_for('products') }}">TECH SPORTS</a><!-- using jinja2 template flask-->
+            <a href="{{ url_for('products') }}">WEIGHTS</a><!-- using jinja2 template flask-->
+            <a href="{{ url_for('products') }}">FITNESS</a><!-- using jinja2 template flask-->
           </div>
 		  </div>
       <!--(SF)To give the products page a different layout we used a 2 grid container instead of 3 grids but for the last section where we kept the 3 grids -->
@@ -71,8 +71,8 @@
        		<div class="plan">
             <div class="card-1 card--secondary">
               <header class="card__header">
-                <img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-              </header>
+                <img src="{{url_for('static', filename='images/accessories.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+              </header><!-- using jinja2 template flask-->
               <div class="card__body">
                 <ul class="list list--tick">
                   <h4 class="list-item">FH WELLBEING</h4>
@@ -88,8 +88,8 @@
            <div class="plan">
             <div class="card-1 card--secondary">
               <header class="card__header">
-                <img src="images/yogaBands.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-              </header>
+                <img src="{{url_for('static', filename='images/yogaBands.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+              </header><!-- using jinja2 template flask-->
               <div class="card__body">
                   <ul class="list list--tick">
                     <h4 class="list-item">FH WEIGHTS</h4>
@@ -110,8 +110,8 @@
         <div class="plan">
 			  	<div class="card-1 card--secondary">
 					<header class="card__header">
-						<img src="images/threadmillSlider.jpg" style="width: 350px; height:300px" alt="fit house threadmill"/>
-					</header>
+						<img src="{{url_for('static', filename='images/threadmillSlider.jpg')}}" style="width: 350px; height:300px" alt="fit house threadmill"/>
+					</header><!-- using jinja2 template flask-->
 				<div class="card__body">
 					  <ul class="list list--tick">
               <h4 class="list-item">FH EXERCISE BIKES</h4>
@@ -127,8 +127,8 @@
 				  <div class="plan">
 				  	<div class="card-1 card--secondary">
               <header class="card__header">
-                <img src="images/threadmill.jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
-              </header>
+                <img src="{{url_for('static', filename='images/threadmill.jpg')}}" style="width: 350px; height:300px" alt="fit house accesories"/>
+              </header><!-- using jinja2 template flask-->
 					  <div class="card__body">
               <ul class="list list--tick">
                 <h4 class="list-item">FH FITNESS</h4>
@@ -149,8 +149,8 @@
           <div class="plan">
             <div class="card-1 card--secondary">
               <header class="card__header">
-                <img src="images/weights.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-              </header>
+                <img src="{{url_for('static', filename='images/weights.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+              </header><!-- using jinja2 template flask-->
                 <div class="card__body">
                   <ul class="list list--tick">
                     <h4 class="list-item">FH Weights</h4>
@@ -166,8 +166,8 @@
         <div class="plan">
             <div class="card-1 card--secondary">
               <header class="card__header">
-                <img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
-              </header>
+                <img src="{{url_for('static', filename='images/exercisebike .jpg')}}" style="width: 350px; height:300px" alt="fit house accesories"/>
+              </header><!-- using jinja2 template flask-->
               <div class="card__body">
                 <ul class="list list--tick">
                   <h4 class="list-item">FH Tech sports </h4>
@@ -188,8 +188,8 @@
         <div class="plan">
             <div class="card-1 card--secondary">
               <header class="card__header">
-                <img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-              </header>
+                <img src="{{url_for('static', filename='images/accessories.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+              </header><!-- using jinja2 template flask-->
               <div class="card__body">
                 <ul class="list list--tick">
                   <h4 class="list-item">FH ACCESSORIES</h4>
@@ -205,8 +205,8 @@
           <div class="plan">
             <div class="card-1 card--secondary">
               <header class="card__header">
-                <img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
-              </header>
+                <img src="{{url_for('static', filename='images/exercisebike .jpg')}}" style="width: 350px; height:300px" alt="fit house accesories"/>
+              </header><!-- using jinja2 template flask-->
               <div class="card__body">
                 <ul class="list list--tick">
                   <h4 class="list-item">FH CARDIO</h4>
@@ -227,8 +227,8 @@
         <div class="plan">
           <div class="card-1 card--secondary">
             <header class="card__header">
-              <img src="images/techsports.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-            </header>
+              <img src="{{url_for('static', filename='images/techsport.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+            </header><!-- using jinja2 template flask-->
             <div class="card__body">
               <ul class="list list--tick">
                 <h4 class="list-item">FH CARDIO</h4>
@@ -244,8 +244,8 @@
           <div class="plan">
             <div class="card-1 card--secondary">
               <header class="card__header">
-                <img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
-              </header>
+                <img src="{{url_for('static', filename='images/exercisebike .jpg')}}" style="width: 350px; height:300px" alt="fit house accesories"/>
+              </header><!-- using jinja2 template flask-->
               <div class="card__body">
                 <ul class="list list--tick">
                   <h4 class="list-item">FH CARDIO</h4>
@@ -266,8 +266,8 @@
         <div class="plan">
           <div class="card-1 card--secondary">
             <header class="card__header">
-              <img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-            </header>
+              <img src="{{url_for('static', filename='images/accessories.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+            </header><!-- using jinja2 template flask-->
             <div class="card__body">
               <ul class="list list--tick">
                 <h4 class="list-item">FH ACCESSORIES</h4>
@@ -283,8 +283,8 @@
         <div class="plan">
           <div class="card-1 card--secondary">
             <header class="card__header">
-              <img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
-            </header>
+              <img src="{{url_for('static', filename='images/exercisebike .jpg')}}" style="width: 350px; height:300px" alt="fit house accesories"/>
+            </header><!-- using jinja2 template flask-->
             <div class="card__body">
               <ul class="list list--tick">
                 <h4 class="list-item">FH CARDIO</h4>
@@ -300,8 +300,8 @@
         <div class="plan">
           <div class="card-1 card--secondary">
             <header class="card__header">
-              <img src="images/techsports.jpg" style="width: 350px; height:300px" alt="fit house Techsports"/>
-            </header>
+              <img src="{{url_for('static', filename='images/techsport.jpg')}}" style="width: 350px; height:300px" alt="fit house Techsports"/>
+            </header><!-- using jinja2 template flask-->
           <div class="card__body">
             <ul class="list list--tick">
               <h4 class="list-item">FH CARDIO</h4>
@@ -322,10 +322,10 @@
 			<div class="footer-main container1">
 				<div class="col">
 					<h3 class="footer-heading">USEFUL LINKS</h3>
-					<a href="index.html" class="footer-link">Fit House</a>
-					<a href="index.html" class="footer-link">About Us</a>
-					<a href="index.html" class="footer-link">Contact Us</a>
-					<a href="products.html" class="footer-link">Our Products</a>
+					<a href="{{ url_for('index') }}" class="footer-link">Fit House</a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('index') }}" class="footer-link">About Us</a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('contact') }}" class="footer-link">Contact Us</a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('products') }}" class="footer-link">Our Products</a><!-- using jinja2 template flask-->
 				</div>
 				<div class="col">
 					<h3 class="footer-heading">NEWSLETTER</h3>
@@ -355,7 +355,7 @@
 		</div>
 	</footer>
 
-  <script src="js/main.js"></script> 
+  <script src="../static/js/main.js"></script> 
 		<!--(SF)The below link it to allow the function of the zoom capability on the page -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>AOS.init();</script>

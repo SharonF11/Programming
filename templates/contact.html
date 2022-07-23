@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--(SF)The desing and layout was created and setup by Sharon Farrell (SF)-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="sport products to revserve">
+    <title>Sport Ca1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--(SF)Links to the visual studio code extenstion normalize - this optimizes the css within visual studio-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" /> <!-- using jinja2 template flask-->
+    <!--(SF)Links my css code to the pages-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /> <!-- using jinja2 template flask-->
+    <!--(SF)AOS is a download to allow differnet functions on the page such as the header fading in and the spped of which is fads-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- (SF)fontawesomw is an open source Icon provider for our social media icons-->
+    <script src="https://kit.fontawesome.com/56d4a5bb86.js" crossorigin="anonymous"></script>
+    <!--(SF) Tools used for the design of this website, CodingWithMosh, W3Schools, cssgradient generator, Fontawesome-->
+</head>
+
+<body>
+    <!--(SF) this is the start of our web page-->
+    <header>
+        <div class="header">
+            <nav class="navbar collapsible" id="navbar">
+                <!--(SF)when clicked on our cursor changes to a pointer and allow the logo to be click and linked to the home page when clicked on any of the pages-->
+                <a aria-label="FitHouse" class="nav-logo" href="{{ url_for('index') }}"> <!--using flask jinja2 template to get the url for the index page-->
+                    <img src="{{url_for('static', filename='images/logoFH.svg')}}" alt="Fit House Brand"> <!-- using jinja2 template flask-->
+                </a>
+                <!--(SF)when the navbar is shown on a smaller divce the page menu changes to a hamburger style icon when this is clicked it bring a drop down to the different pages you want to visit-->
+                <svg class="icon icon--white nav__toggle">
+                    <use href="{{url_for('static', filename='images/sprite.svg#menu')}}"></use>
+                </svg><!-- using jinja2 template flask-->
+                <ul class="list nav__list collapsible__content" id="menu">
+                    <li class="nav__item"><a href="{{ url_for('products') }}">Products</a><!-- using jinja2 template flask-->
+                    <li>
+                    <li class="nav__item"><a href="{{ url_for('index') }}">About</a></li> <!-- using jinja2 template flask-->
+                    <li class="nav__item"><a href="{{ url_for('contact') }}">Contact</a></li> <!-- using jinja2 template flask-->
+                    <li class="nav__item"><a href="{{ url_for('index') }}">Home</a></li> <!-- using jinja2 template flask-->
+                </ul>
+            </nav>
+        </div>
+        <!--(SF)The header has been desinged from an example of the codewithmosh tutorial There is a tool called -->
+    </header>
+    <!--(SF) Main body of the site with the products and links to the reserve and products page-->
+    <Main> 
+		<!--Tools used "CodewithMosh"-->
+		<section class="block block--dark block--skewed-left hero">
+			<div class="container grid">
+				<header class="block__header hero__content">
+						<!--(SF) The below is a link to AOS css which can give different effects on the web page when scrolling, I have used this tool in the past from viewing "CodewithMosh", The H1 header gives a larger font on the main header-->
+					<h1 data-aos="zoom-in" data-aos-duration="3000" class="block-heading">
+						Fitness Equipment for those serious about getting FIT</h1>
+					<h2 data-aos="zoom-in" data-aos-duration="3000">Tailored made fitness from the experts</h2>
+				</header>  
+			</div>	
+		</section>
+        <div class="block__header hero__content">
+                <!--(SF)The below is a link to AOS css which can give different effects on the web page when scrolling found it watching "CodewithMosh"-->
+                <form onsubmit="sendContact(document.getElementById('firstName').value, document.getElementById('email').value);return false", id="contact_form">
+                    <p type="text" name="peep" id="peep"></p>
+                    <br>
+                    <h1>Get In Touch!</h1>
+                    <input type="text" placeholder="Enter your first name" id="firstName" required style="margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px"/>
+                    <!-- <br> -->
+                    <input type="text" placeholder="Enter your last name" id="lastName" required style="margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px"/>
+                    <br>
+                    <input type="email" placeholder="Enter your email" id="email" required style="margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px"/>
+                    <!-- <br> -->
+                    <input type="tel" pattern="[0-9]{10}" placeholder="Enter your 10 digit phone number" id="phone" required style="margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px"/>
+                    <br>
+                    <small>What is your question?</small>
+                    <br>
+                    <textarea id="question" rows="4" cols="50" required></textarea>
+                    <br><br>
+                    <input type="submit" value="send contact", id="send_contact">
+                </form>
+        </div>
+    <footer class="footer">
+        <div class="container1">
+            <div class="footer-main container1">
+                <div class="col">
+                    <h3 class="footer-heading">USEFUL LINKS</h3>
+                    <a href="{{ url_for('index') }}" class="footer-link">Fit
+                        House</a> <!-- using jinja2 template flask-->
+                    <a href="{{ url_for('index') }}" class="footer-link">About
+                        Us</a><!-- using jinja2 template flask-->
+                    <a href="{{ url_for('index') }}" class="footer-link">Contact
+                        Us</a><!-- using jinja2 template flask-->
+                    <a href="{{ url_for('index') }}" class="footer-link">Our
+                        Products</a><!-- using jinja2 template flask-->
+                </div>
+                <div class="col">
+                    <h3 class="footer-heading">NEWSLETTER</h3>
+                    <form>
+                        <!--(SF)this is the form and the input must be in the form of an eamil address if not it will throw back an message asking for email address-->
+                        <input type="email" placeholder="Your Email Address" required>
+                        <br>
+                        <button type="submit">SUBSCRIBE NOW</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <h3 class="footer-heading">CONTACT US</h3>
+                    <P>123 Off Street<br />City Center<br />Dublin<br />email:info@123fithouse.com<br />Tel:+35311231234
+                    </P>
+                </div>
+                <div class="col">
+                    <h3>SOCIAL</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social"><i class="fab fa-facebook"></i>
+                        <a href="#" class="social"><i class="fab fa-twitter"></i>
+                        <a href="#" class="social"><i class="fab fa-youtube"></i>
+                        <a href="#" class="social"><i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="copyright">&copy;
+                    2022 Fit House</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/contact.js"></script>
+    <!--(SF)The below link it to allow the function of the zoom capability on the page -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <!--(SF)This is the JS function to allow the navbar stay on the top of the page if we scroll down the website-->
+    <script>var navbar = document.getElementById("navbar");
+        var menu = document.getElementById("menu");
+
+        window.onscroll = function () {
+            if (window.pageYOffset >= menu.offsetTop) {
+                navbar.classList.add("sticky");
+            }
+            else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

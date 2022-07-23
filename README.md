@@ -26,3 +26,19 @@ From the answer the chatbot can direct the user to a web page
 can we help further
 User Yes - chatbot ask how - user answers 
 Chat bot directs user
+
+# steps to run flask app
+
+Prerequisites - python.
+
+After cloning the repository, navigate to the root directory.
+
+Inside the root directory open a command shell and run pip install -r requirements.txt to install the requirements and to start the application run python app.py
+
+To view the webpage open http://127.0.0.1:5000 in a browser.
+
+# reference
+https://flask.palletsprojects.com/en/2.1.x/
+https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+
+https://docs.python.org/3/library/smtplib.html

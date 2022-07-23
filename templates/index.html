@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" /> <!-- using jinja2 template flask-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /><!-- using jinja2 template flask-->
 	<!--(SF) Aos gives the effect of fading in, up and to the left.-->
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!--(SF)Font Awesome is used for the socila media icons -->
@@ -24,18 +24,18 @@
 	<header>
 		<div class="header">
 			<!--(SF)this function allow the navbar to collaspe on differnet devices and give an on hover change of color from the css code-->
-			<nav class="navbar collapsible" id="navbar">
-				<a aria-label="FitHouse" class="nav-logo" href="index.html">
-					<img src="images/logoFH.svg" alt="Fit House Brand"></a>
+			<nav class="navbar" id="navbar">
+				<a aria-label="FitHouse" class="nav-logo" href="{{ url_for('index') }}"><!-- using jinja2 template flask-->
+					<img src="{{url_for('static', filename='images/logoFH.svg')}}" alt="Fit House Brand"></a><!-- using jinja2 template flask-->
 				<svg class="icon icon--white nav__toggle">
-				<use href="images/sprite.svg#menu"></use>
+				<use href="{{url_for('static', filename='images/sprite.svg#menu')}}"></use><!-- using jinja2 template flask-->
 				</svg>
 				<!--(SF)This functions allows the menu on the navbar collaspe when viewed on a smaller device than a desktop-->
 				<ul class="list nav__list collapsible__content" id="menu">
-					<li class="nav__item"><a href="products.html">Products</a></li>
-					<li class="nav__item"><a href="index.html">About</a></li>
-					<li class="nav__item"><a href="index.html">Contact</a></li>
-					<li class="nav__item"><a href="index.html">Home</a></li>
+					<li class="nav__item"><a href="{{ url_for('products') }}">Products</a></li><!-- using jinja2 template flask-->
+					<li class="nav__item"><a href="{{ url_for('index') }}">About</a></li><!-- using jinja2 template flask-->
+					<li class="nav__item"><a href="{{ url_for('contact') }}">Contact</a></li><!-- using jinja2 template flask-->
+					<li class="nav__item"><a href="{{ url_for('index') }}">Home</a></li><!-- using jinja2 template flask-->
 				</ul>
 			</nav>
 		</div>
@@ -58,11 +58,11 @@
 			<div class="dropdown">
 				<button onclick="myFunction()" class="dropbtn">VIEW OUR PRODUCT PAGE</button>
 				<div id="myDropdown" class="dropdown-content">
-					<a href="products.html">CARDIO </a>
-					<a href="products.html">YOGA </a>
-					<a href="products.html">TECH SPORTS</a>
-					<a href="products.html">WEIGHTS</a>
-					<a href="products.html">FITNESS</a>
+					<a href="{{ url_for('products') }}">CARDIO </a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('products') }}">YOGA </a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('products') }}">TECH SPORTS</a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('products') }}">WEIGHTS</a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('products') }}">FITNESS</a><!-- using jinja2 template flask-->
 					
 				</div>
 			</div>
@@ -72,8 +72,8 @@
        		 	<div class="plan">
 					<div class="card card--secondary">
 						<header class="card__header">
-							<img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-						</header>
+							<img src="{{url_for('static', filename='images/accessories.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+						</header><!-- using jinja2 template flask-->
 						<div class="card__body">
 						  <ul class="list">
 							  <li class="list__item"><b>FIT HOUSE ACCESSORIES</b></li>
@@ -81,15 +81,15 @@
 							<li class="list__item">Customer Ratings</li>
 							<li class="list__item">Price from €50</li>
 						  </ul>
-							<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+							<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 						</div>
           			</div>
        			</div>
 				<div class="plan">
 				  	<div class="card card--secondary">
 						<header class="card__header">
-							<img src="images/threadmill.jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
-						</header>
+							<img src="{{url_for('static', filename='images/threadmill.jpg')}}" style="width: 350px; height:300px" alt="fit house accesories"/>
+						</header><!-- using jinja2 template flask-->
 					<div class="card__body">
 					  <ul class="list">
 						<li class="list__item"><b>FIT HOUSE TECH EQUIPMENT</b></li>
@@ -97,15 +97,15 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Price from €2000</li>
 					  </ul>
-					  <button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+					  <button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 					</div>
 				  </div>
 				</div>
 			<div class="plan">
 			  	<div class="card card--secondary">
 					<header class="card__header">
-						<img src="images/threadmillSlider.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-					</header>
+						<img src="{{url_for('static', filename='images/threadmillSlider.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+					</header><!-- using jinja2 template flask-->
 				<div class="card__body">
 					  <ul class="list">
 						<li class="list__item"><b>FIT HOUSE EXERCISE BIKES</b></li>
@@ -113,7 +113,7 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Prices from €2500</li>
 					  </ul>
-				  	 <button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+				  	 <button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 				</div>
 			  </div>
 			</div>
@@ -124,8 +124,8 @@
 			<div class="plan">
 				<div class="card card--secondary">
 					<header class="card__header">
-						<img src="images/weights.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-					</header>
+						<img src="{{url_for('static', filename='images/weights.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+					</header><!-- using jinja2 template flask-->
 					<div class="card__body">
 						<ul class="list">
 							<li class="list__item"><b>FIT HOUSE ACCESSORIES</b></li>
@@ -133,15 +133,15 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Price from €50</li>
 						</ul>
-						<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+						<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 					</div>
 				</div>
 			</div>
 			<div class="plan">
 				<div class="card card--secondary">
 					<header class="card__header">
-						<img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
-					</header>
+						<img src="{{url_for('static', filename='images/exercisebike .jpg')}}" style="width: 350px; height:300px" alt="fit house accesories"/>
+					</header><!-- using jinja2 template flask-->
 				<div class="card__body">
 					<ul class="list">
 					<li class="list__item"><b>FIT HOUSE TECH EQUIPMENT</b></li>
@@ -149,15 +149,15 @@
 					<li class="list__item">Customer Ratings</li>
 					<li class="list__item">Price from €2000</li>
 					</ul>
-					<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+					<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 				</div>
 				</div>
 			</div>
 			<div class="plan">
 				<div class="card card--secondary">
 					<header class="card__header">
-						<img src="images/yogaBands.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-					</header>
+						<img src="{{url_for('static', filename='images/yogaBands.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+					</header><!-- using jinja2 template flask-->
 					<div class="card__body">
 							<ul class="list">
 							<li class="list__item"><b>FIT HOUSE EXERCISE BIKES</b></li>
@@ -165,7 +165,7 @@
 							<li class="list__item">Customer Ratings</li>
 							<li class="list__item">Prices from €2500</li>
 							</ul>
-							<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+							<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 					</div>
 				</div>
 			</div>
@@ -176,8 +176,8 @@
 			<div class="plan">
 					<div class="card card--secondary">
 						<header class="card__header">
-							<img src="images/accessories.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-						</header>
+							<img src="{{url_for('static', filename='images/accessories.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+						</header><!-- using jinja2 template flask-->
 						<div class="card__body">
 						  <ul class="list">
 							  <li class="list__item"><b>FIT HOUSE ACCESSORIES</b></li>
@@ -185,15 +185,15 @@
 							<li class="list__item">Customer Ratings</li>
 							<li class="list__item">Price from €50</li>
 						  </ul>
-							<button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+							<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 						</div>
           			</div>
        			</div>
 				<div class="plan">
 				  	<div class="card card--secondary">
 						<header class="card__header">
-							<img src="images/exercisebike .jpg" style="width: 350px; height:300px" alt="fit house accesories"/>
-						</header>
+							<img src="{{url_for('static', filename='images/exercisebike .jpg')}}" style="width: 350px; height:300px" alt="fit house accesories"/>
+						</header><!-- using jinja2 template flask-->
 					<div class="card__body">
 					  <ul class="list">
 						<li class="list__item"><b>FIT HOUSE TECH EQUIPMENT</b></li>
@@ -201,15 +201,15 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Price from €2000</li>
 					  </ul>
-					  <button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+					  <button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 					</div>
 				  </div>
 				</div>
 			<div class="plan">
 			  	<div class="card card--secondary">
 					<header class="card__header">
-						<img src="images/techsports.jpg" style="width: 350px; height:300px" alt="fit house logo"/>
-					</header>
+						<img src="{{url_for('static', filename='images/techsport.jpg')}}" style="width: 350px; height:300px" alt="fit house logo"/>
+					</header><!-- using jinja2 template flask-->
 				<div class="card__body">
 					  <ul class="list">
 						<li class="list__item"><b>FIT HOUSE EXERCISE BIKES</b></li>
@@ -217,7 +217,7 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Prices from €2500</li>
 					  </ul>
-				  	 <button class="btn btn--outline btn--block" onClick="location.href='products.html'">See Products</button>
+				  	 <button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
 				</div>
 			  </div>
 			</div>
@@ -230,10 +230,10 @@
 			<div class="footer-main container1">
 				<div class="col">
 					<h3 class="footer-heading">USEFUL LINKS</h3>
-					<a href="index.html" class="footer-link">Fit House</a>
-					<a href="index.html" class="footer-link">About Us</a>
-					<a href="index.html" class="footer-link">Contact Us</a>
-					<a href="products.html" class="footer-link">Our Products</a>
+					<a href="{{ url_for('index') }}" class="footer-link">Fit House</a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('index') }}" class="footer-link">About Us</a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('contact') }}" class="footer-link">Contact Us</a><!-- using jinja2 template flask-->
+					<a href="{{ url_for('products') }}" class="footer-link">Our Products</a><!-- using jinja2 template flask-->
 				</div>
 				<div class="col">
 					<h3 class="footer-heading">NEWSLETTER</h3>
@@ -264,7 +264,7 @@
 		</div>	
 	</footer>
 		<!--This import the js file and links it to the index.html file-->
-    <script src="js/main.js"></script> 
+    <script src="../static/js/main.js"></script> 
 		<!--(SF)The below link it to allow the function of the zoom capability on the page -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>AOS.init();</script>

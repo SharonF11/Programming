@@ -26,3 +26,10 @@ From the answer the chatbot can direct the user to a web page
 can we help further
 User Yes - chatbot ask how - user answers 
 Chat bot directs user
+
+Sharon - designed the website and changes the colour scheme to suit the Programming Ca a contact page was added and the Chatbot was added. The chatbot is fully visable for the purpose of the Library adding and testing. 
+This will be hidden with Opacity when ready to deploy. 
+
+Arivoli - offered to do the Chatbot 
+
+Sugeeth - was asked to do the contact page. 

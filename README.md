@@ -44,3 +44,12 @@ https://github.com/SharonF11/Programming-main-2.git
 My changes are committed to  https://github.com/SharonF11/Programming/tree/send_notification_to_mail
 It is not merged into the main branch.
 I have integrated Sharon's work with Flask in this branch. 
+
+Arivoli Ravichandran - As discussed by the group members to create and add a chat bot to a website, and I volunteered to do the chatbot using python so I have Build a rule based chatbot for this project using the Django framework
+
+I setup an virtual environment in the chat bot project folder and imported an Library django-simple-chatbot and then some question tags and responses was defined to it. So when a user asks a question to the bot the bot looks for the right keyword assigned to that question tag and generate the assigned message as the output.
+
+A working model of the backend was demonstrated on the project presentation day by using the postman for the front end later Sharon created a ui for the bot on the website and I linked the Backend code with it.
+
+All the project files of the completed chatbot has been pushed to the GitHub in a folder chatbot2. 
+I declare that the work done is my own. Arivoli Ravichandran 

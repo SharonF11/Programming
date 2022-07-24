@@ -33,3 +33,6 @@ This will be hidden with Opacity when ready to deploy.
 Arivoli - offered to do the Chatbot 
 
 Sugeeth - was asked to do the contact page. 
+
+The was an issue late on Wednesday the 20th July Pushing changes made by Sharon and another repository was set up to be able to add and show the work being done on the project. This was made public to all others but since the presentation Sharon made it Private again as Sugeeth had completed some changes and requested a Pull request and when the code was checked all the original code was changed which broke the website and pages were not visible. This was not pushed to the master branch for this reason. This is the link for the second repository.
+https://github.com/SharonF11/Programming-main-2.git

@@ -54,6 +54,6 @@ A working model of the backend was demonstrated on the project presentation day 
 All the project files of the completed chatbot has been pushed to the GitHub in a folder chatbot2. 
 I declare that the work done is my own. Arivoli Ravichandran 
 
-<name> student number <10xxxxxx> confirm that I have correctly attributed all sources and learning resources used in the preparation of the project, and understand that if I have not done so, I will receive a zero grade. I confirm that any unattributed code for which I am responsible is entirely my own work.
+Arivoli student number 10609974 confirm that I have correctly attributed all sources and learning resources used in the preparation of the project, and understand that if I have not done so, I will receive a zero grade. I confirm that any unattributed code for which I am responsible is entirely my own work.
 
  

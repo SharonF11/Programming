@@ -1,8 +1,7 @@
 function sendContact(name, email) {
   params = "name=" + name;
-  send_url = "http://127.0.0.1:5000/contact/send_notification"; // url for calling send_to_notification
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", send_url, false); // false for syncronous requests
+  xhr.open("POST", send_not_url, false); // false for syncronous requests
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(
     JSON.stringify({

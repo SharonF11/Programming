@@ -22,3 +22,7 @@ window.onclick = function(event) {
     }
   }
 }
+
+function products(){
+  window.location.href=prdcts;
+} // funtion to load product page on clicking see products button

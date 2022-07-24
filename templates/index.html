@@ -81,7 +81,7 @@
 							<li class="list__item">Customer Ratings</li>
 							<li class="list__item">Price from €50</li>
 						  </ul>
-							<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+							<button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 						</div>
           			</div>
        			</div>
@@ -97,7 +97,7 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Price from €2000</li>
 					  </ul>
-					  <button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+					  <button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 					</div>
 				  </div>
 				</div>
@@ -113,7 +113,7 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Prices from €2500</li>
 					  </ul>
-				  	 <button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+				  	 <button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 				</div>
 			  </div>
 			</div>
@@ -133,7 +133,7 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Price from €50</li>
 						</ul>
-						<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+						<button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 					</div>
 				</div>
 			</div>
@@ -149,7 +149,7 @@
 					<li class="list__item">Customer Ratings</li>
 					<li class="list__item">Price from €2000</li>
 					</ul>
-					<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+					<button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 				</div>
 				</div>
 			</div>
@@ -165,7 +165,7 @@
 							<li class="list__item">Customer Ratings</li>
 							<li class="list__item">Prices from €2500</li>
 							</ul>
-							<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+							<button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 					</div>
 				</div>
 			</div>
@@ -185,7 +185,7 @@
 							<li class="list__item">Customer Ratings</li>
 							<li class="list__item">Price from €50</li>
 						  </ul>
-							<button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+							<button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 						</div>
           			</div>
        			</div>
@@ -201,7 +201,7 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Price from €2000</li>
 					  </ul>
-					  <button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+					  <button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 					</div>
 				  </div>
 				</div>
@@ -217,7 +217,7 @@
 						<li class="list__item">Customer Ratings</li>
 						<li class="list__item">Prices from €2500</li>
 					  </ul>
-				  	 <button class="btn btn--outline btn--block" onClick="location.href='http://127.0.0.1:5000/products'">See Products</button>
+				  	 <button class="btn btn--outline btn--block" onclick="products();return false">See Products</button>
 				</div>
 			  </div>
 			</div>
@@ -264,6 +264,7 @@
 		</div>	
 	</footer>
 		<!--This import the js file and links it to the index.html file-->
+	<script>var prdcts = "{{ url_for('products') }}"; </script><!-- jinja2 template to get url for products -->
     <script src="../static/js/main.js"></script> 
 		<!--(SF)The below link it to allow the function of the zoom capability on the page -->
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -40,3 +40,7 @@ In the design of the chatbot I used Python website - containers - css linked to 
 
 I declare that the work done is my own and the only referencing is on my source code. Sharon Farrell 
 https://github.com/SharonF11/Programming-main-2.git
+
+My changes are committed to  https://github.com/SharonF11/Programming/tree/send_notification_to_mail
+It is not merged into the main branch.
+I have integrated Sharon's work with Flask in this branch. 

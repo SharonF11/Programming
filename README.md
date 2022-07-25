@@ -42,3 +42,6 @@ https://flask.palletsprojects.com/en/2.1.x/
 https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
 
 https://docs.python.org/3/library/smtplib.html
+
+
+# App password delete - For app password creation, I used my google account. I generated passwords for mail validation on my windows computer. For security reasons, I remove these passwords. Because this GitHub is public.
